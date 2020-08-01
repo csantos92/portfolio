@@ -3,6 +3,7 @@
     height: 100%;
     display: grid;
     grid-template-rows: 10% 35% 10% 45%;
+    overflow: scroll;
 
     h1{
         padding-left: 2%;
@@ -46,7 +47,7 @@
                 background-color: #78cc6d;
                 padding: 5px;
                 border-radius: 5px;
-                margin-top: 13px !important;
+                margin-top: 13px;
             }
 
             .second-text{
