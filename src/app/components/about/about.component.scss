@@ -2,32 +2,30 @@
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 10% 35% 10% 45%;
-    overflow: scroll;
+    grid-template-rows: 14% 43% 14% 45%;
+    overflow-y: scroll;
 
     h1{
         padding-left: 2%;
-        padding-top: 5%;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.048);
+        padding-top: 4%;
         font-size: 21px;
-    }
-
-    p{
-        padding: 4%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.048);
     }
 
     #myinfo{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        
 
-        p{
+        #aboutme{
+            padding: 3%;
             border-right: 1px solid rgba(0, 0, 0, 0.048);
         }
 
         ul{
             display: grid;
             grid-template-rows: repeat(4, 20%);
-            padding: 3%;
+            padding: 4%;
             padding-left: 8%;
             padding-right: 8%;
 
@@ -55,5 +53,10 @@
                 margin-top: 13x;
             }
         }
+    }
+
+    #goals{
+        padding: 3%;
+        padding-top: 2%;
     }
 }
