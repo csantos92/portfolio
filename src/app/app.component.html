@@ -3,16 +3,13 @@
     <nav id="menu">
       <ul>
         <li>
-          <a [routerLink]="['/about']"><span class='fas fa-user'></span><p>SOBRE MÍ</p></a>
+          <a [routerLink]="['/about']" [routerLinkActive]="['active']"><span class='fas fa-user'></span><p>SOBRE MÍ</p></a>
         </li>
         <li>
-          <a [routerLink]="['/resume']"><span class='fas fa-paperclip'></span><p>CV</p></a>
+          <a [routerLink]="['/resume']" [routerLinkActive]="['active']"><span class='fas fa-paperclip'></span><p>CV</p></a>
         </li>
         <li>
-          <a [routerLink]="['/projects']"><span class='fas fa-folder-open'></span><p>PROYECTOS</p></a>
-        </li>
-        <li>
-          <a [routerLink]="['/contact']"><span class='fas fa-paper-plane'></span><p>CONTACTO</p></a>
+          <a [routerLink]="['/projects']" [routerLinkActive]="['active']"><span class='fas fa-folder-open'></span><p>PROYECTOS</p></a>
         </li>
       </ul>
     </nav>
