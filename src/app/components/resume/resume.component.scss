@@ -1,10 +1,74 @@
-#resume-wrapper{
-    width: 100%;
+//SASS Functions
+
+@mixin li-content($percentage1, $percentage2){
+    display: grid;
+    grid-template-columns: $percentage1 $percentage2;
+    list-style: none;
+    padding-left: 3%;
+    border-bottom: 1px solid rgba(125, 230, 115, 0.15);
+    align-items: center;
+}
+
+@mixin progress-bar{
+    height: 10px;
+    width: 90%;
+    border-radius: 7px;
+    background-color: rgb(180, 209, 180);
+
+    .bar{
+        height: 100%;
+        width: 50%;
+        border-radius: 7px;
+        background-color: rgb(116, 197, 130);
+    }
+
+    .hundred{
+        width: 100%;
+    }
+
+    .ninety{
+        width: 90%;
+    }
+
+    .eighty{
+        width: 80%;
+    }
+
+    .seventy{
+        width: 70%;
+    }
+
+    .sixty{
+        width: 60%;
+    }
+
+    .forty{
+        width: 40%;
+    }
+}
+
+@mixin tag-color($color){
+    background-color: $color;
+    padding: 2%;
+    font-size: 12px;
+    color: white;
+    border-radius: 3px;
+}
+
+@mixin ul-content($rows, $percentage){
+    display: grid;
+    grid-template-rows: repeat($rows, $percentage);
     height: 100%;
+}
+
+//SASS Nestings
+
+#resume-wrapper{
     display: grid;
     grid-template-rows: 14% 95% 14% 95% 60%;
     overflow-y: scroll;
- 
+    width: 100%;
+    height: 100%;
 
     h1{
         padding-left: 2%;
@@ -24,7 +88,6 @@
     #resume-top{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        height: 100%;
 
         #experience{
             border-right: 1px solid rgba(125, 230, 115, 0.15);
@@ -48,19 +111,11 @@
                         height: 70%;
 
                         .current{
-                            background-color: #78cc6d;
-                            padding: 2%;
-                            font-size: 12px;
-                            color: white;
-                            border-radius: 3px;
+                            @include tag-color(#78cc6d)
                         }
 
                         .finished{
-                            background-color: #8dac88;
-                            padding: 2%;
-                            font-size: 12px;
-                            color: white;
-                            border-radius: 3px;
+                            @include tag-color(#8dac88)
                         }
                     }
     
@@ -82,53 +137,19 @@
     #resume-middle{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        height: 100%;
 
         #programming{
             border-right: 1px solid rgba(125, 230, 115, 0.15);
             height: 100%;
 
             ul{
-                display: grid;
-                grid-template-rows: repeat(6, 14.44%);
-                height: 100%;
+                @include ul-content(6, 14.44%);
                 
                 li{
-                    display: grid;
-                    grid-template-columns: 30% 70%;
-                    list-style: none;
-                    padding-left: 3%;
-                    border-bottom: 1px solid rgba(125, 230, 115, 0.15);
-                    align-items: center;
+                    @include li-content(30%, 70%);
 
                     .progress{
-                        height: 10px;
-                        width: 90%;
-                        border-radius: 7px;
-                        background-color: rgb(180, 209, 180);
-
-                        .bar{
-                            height: 100%;
-                            width: 50%;
-                            border-radius: 7px;
-                            background-color: rgb(116, 197, 130);
-                        }
-
-                        .ninety{
-                            width: 90%;
-                        }
-
-                        .seventyfive{
-                            width: 75%;
-                        }
-
-                        .sixty{
-                            width: 60%;
-                        }
-
-                        .forty{
-                            width: 40%;
-                        }
+                        @include progress-bar();
                     }
                 }
 
@@ -142,44 +163,13 @@
             height: 100%;
 
             ul{
-                display: grid;
-                grid-template-rows: repeat(3, 14.44%);
-                height: 100%;
+                @include ul-content(3, 14.44%);
                 
                 li{
-                    display: grid;
-                    grid-template-columns: 30% 70%;
-                    list-style: none;
-                    padding-left: 3%;
-                    border-bottom: 1px solid rgba(125, 230, 115, 0.15);
-                    align-items: center;
+                    @include li-content(30%, 70%);
 
                     .progress{
-                        height: 10px;
-                        width: 90%;
-                        border-radius: 7px;
-                        background-color: rgb(180, 209, 180);
-
-                        .bar{
-                            height: 100%;
-                            width: 50%;
-                            border-radius: 7px;
-                            background-color: rgb(116, 197, 130);
-                        }
-
-                        
-                        .hundred{
-                            width: 100%;
-                        }
-
-                        .ninety{
-                            width: 90%;
-                        }
-
-                        .seventyfive{
-                            width: 75%;
-                        }
-
+                        @include progress-bar();
                     }
                 }
 
@@ -191,8 +181,6 @@
     }
 
     #resume-bottom{
-        height: 100%;
-        width: 100%;
         display: grid;
         grid-template-rows: 22% 88%;
         border-top: 1px solid rgba(125, 230, 115, 0.15);
@@ -223,22 +211,13 @@
         #list{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            width: 100%;
-            height: 100%;
             border-top: 1px solid rgba(125, 230, 115, 0.15);
 
             ul{
-                display: grid;
-                grid-template-rows: repeat(4, 1fr);
-                height: 100%;
+                @include ul-content(4, 1fr);
                 
                 li{
-                    display: grid;
-                    grid-template-columns: 8% 92%;
-                    list-style: none;
-                    padding-left: 3%;
-                    border-bottom: 1px solid rgba(125, 230, 115, 0.15);
-                    align-items: center;
+                    @include li-content(8%, 92%);
 
                     .green{
                         color: rgb(116, 197, 130);

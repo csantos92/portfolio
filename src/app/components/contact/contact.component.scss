@@ -1,8 +1,9 @@
+//SASS Nesting
+
 #contact-wrapper{ 
     display: grid;
     grid-template-rows: 14% 86%;
     overflow: hidden;
-    width: 100%;
     height: 100%;
 
     h1{
@@ -15,8 +16,6 @@
 
     #getincontact{
         display: grid;
-        width: 100%;
-        height: 100%;
         grid-template-rows: 70% 25%;
 
         iframe{
@@ -28,7 +27,6 @@
 
         #details{
             width: 70%;
-            height: 100%;
             margin: 0px auto;
 
             ul{
