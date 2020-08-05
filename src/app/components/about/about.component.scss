@@ -1,4 +1,70 @@
+//Responsive
+
+@mixin screen-small{
+    @media (max-width: 1366px){
+        @content;
+    }
+}
+
+@mixin tablet-portrait{
+    @media (max-width: 834px){
+        @content;
+    }
+}
+
+@mixin tablet-landscape{
+    @media (max-width: 1112px){
+        @content;
+    }
+}
+
+@mixin tablet-landscape-small{
+    @media (max-width: 1024px){
+        @content;
+    }
+}
+
+@mixin tablet-small{
+    @media (max-width: 956px){
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media (max-width: 568px){
+        @content;
+    }
+}
+
+@mixin mobile-medium{
+    @media (max-width: 510px){
+        @content;
+    }
+}
+
+@mixin mobile-small{
+    @media (max-width: 414px){
+        @content;
+    }
+}
+
+@mixin mobile-extra-small{
+    @media (max-width: 375px){
+        @content;
+    }
+}
+
+@mixin mobile-extra-small-2{
+    @media (max-width: 320px){
+        @content;
+    }
+}
+
 //SASS Nesting
+
+*{
+    transition: all 300ms;
+}
 
 #about-wrapper{
     height: 100%;
@@ -6,9 +72,41 @@
     grid-template-rows: 14% 43% 14% 45%;
     overflow-y: scroll;
 
+    @include screen-small{
+        grid-template-rows: 14% 47% 14% 45%;
+    };
+
+    @include tablet-landscape{
+        grid-template-rows: 14% 80% 14% 45%;
+    }
+
+    @include tablet-portrait{
+        grid-template-rows: 14% 76% 14% 45%;
+    }
+
+    @include tablet-small{
+        grid-template-rows: 14% 89% 14% 45%;
+    };
+
+    @include mobile-medium{
+        grid-template-rows: 14% 96% 14% 45%;
+    };
+
+    @include mobile-small{
+        grid-template-rows: 14% 79% 14% 45%;
+    }
+
+    @include mobile-extra-small{
+        grid-template-rows: 14% 89% 14% 45%;
+    }    
+
+    @include mobile-extra-small-2{
+        grid-template-rows: 14% 86% 14% 45%;
+    }
+
     h1{
         padding-left: 2%;
-        padding-top: 4%;
+        padding-top: 30px;
         font-size: 21px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.048);
     }
@@ -17,6 +115,41 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
 
+        @include tablet-landscape{
+            grid-template-columns: unset !important;
+            grid-template-rows: 42% 67%;
+        }
+
+        @include tablet-landscape-small{
+            grid-template-columns: unset !important;
+            grid-template-rows: 45% 67%;
+        }
+
+        @include tablet-portrait{
+            grid-template-columns: unset !important;
+            grid-template-rows: 40% 67%;
+        }
+
+        @include mobile{
+            grid-template-columns: unset !important;
+            grid-template-rows: 43% 67%;
+        }
+
+        @include mobile-small{
+            grid-template-columns: unset !important;
+            grid-template-rows: 55% 51%;
+        }
+
+        @include mobile-extra-small{
+            grid-template-columns: unset !important;
+            grid-template-rows: 58% 48%;
+        }
+
+        @include mobile-extra-small-2{
+            grid-template-columns: unset !important;
+            grid-template-rows: 61% 39%;
+        }
+
         #aboutme{
             padding: 3%;
             border-right: 1px solid rgba(0, 0, 0, 0.048);
@@ -24,10 +157,14 @@
 
         ul{
             display: grid;
-            grid-template-rows: repeat(4, 20%);
+            grid-template-rows: 1fr 1fr 1fr 1fr;
             padding: 4%;
             padding-left: 8%;
             padding-right: 8%;
+
+            @include tablet-landscape{
+                padding: 3%;
+            }
 
             li{
                 list-style: none;

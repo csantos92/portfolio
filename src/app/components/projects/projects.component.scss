@@ -1,19 +1,25 @@
-//Responsive Mixins
+//Responsive
 
-@mixin break-one{
-    @media (max-width: 1680px){
+@mixin screen{
+    @media (min-width: 834px){
         @content;
     }
 }
 
-@mixin break-two{
-    @media (min-width: 1440px) and (max-width: 1679px){
+@mixin mobile{
+    @media (max-width: 833px){
         @content;
     }
 }
 
-@mixin break-three{
-    @media (min-width: 1366px) and (max-width: 1439px){
+@mixin mobile-small{
+    @media (max-width: 532px){
+        @content;
+    }
+}
+
+@mixin mobile-extra-small-2{
+    @media (max-width: 334px){
         @content;
     }
 }
@@ -23,6 +29,10 @@
 $border-style: 1px solid rgba(127, 179, 125, 0.05);
 
 //SASS Nesting
+
+*{
+    transition: all 300ms;
+}
 
 #projects-wrapper{ 
     display: grid;
@@ -44,24 +54,51 @@ $border-style: 1px solid rgba(127, 179, 125, 0.05);
         padding: 3%;
         height: 100%;
 
+        @include screen{
+            margin-bottom: 5%;
+            justify-content: center; 
+        };
+
+        @include mobile{
+            margin-bottom: 5%;
+            justify-content: center; 
+            padding: 10%;
+            padding-top: 0;
+        };
+
+        @include mobile-small{
+            margin-bottom: 5%;
+            justify-content: center; 
+            padding: 15%;   
+            padding-top: 0;
+        };
+
+        @include mobile-extra-small-2{
+            margin-bottom: 5%;
+            padding-top: 0;
+            justify-content: center;    
+        };
+
         .project-card{
             width: 200px;
             height: 275px;
-            margin: 2% 0 0 7.5%;
+            margin: 2% 0 0 0;
             border: $border-style;
             border-radius: 7px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 
-            @include break-one{
-                margin: 2% 0 0 5.5%;
+            @include screen{
+                margin: 2% 6% 0 0;
             };
 
-            @include break-two{
-                margin: 2% 0 0 2.5%;
+            @include mobile{
+                margin: 7% 20px 1px 20px;
             };
 
-            @include break-three{
-                margin: 2% 0 0 1.5%;
+            @include mobile-small{
+                margin: 0;
+                margin-top: 3%;
+                margin-bottom: 3%;
             };
 
             .text{
