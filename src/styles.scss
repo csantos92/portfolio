@@ -39,11 +39,11 @@ html, body, app-root {
     display: block;
     height: 100%;
     width: 100%;
-    margin: 0;
 } 
 
 body{
     background: linear-gradient(to bottom right,#00467F 0%,#A5CC82 100%);
+    background-size: 100% 200%;
     overflow: auto;
 }
 

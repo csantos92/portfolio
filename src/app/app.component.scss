@@ -161,6 +161,7 @@ $border-style: 1px solid rgba(128, 128, 128, 0.116);
         grid-template-rows: 60% 30% 10%;
         margin-top: -10px;
         z-index: 10;
+        height: 100%;
         @include wrapper-style();
 
         @include tablet-portrait{
@@ -263,7 +264,6 @@ $border-style: 1px solid rgba(128, 128, 128, 0.116);
 
                     a{
                         display: block;
-                        margin-bottom: 5px;
                         @include a-style();
                     }
 
