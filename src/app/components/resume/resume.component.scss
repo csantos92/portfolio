@@ -35,9 +35,9 @@
     align-items: center;
 }
 
-@mixin progress-bar{
+@mixin progress-bar($width){
     height: 10px;
-    width: 90%;
+    width: $width;
     border-radius: 7px;
     background-color: rgb(180, 209, 180);
 
@@ -202,7 +202,7 @@
                     @include li-content(30%, 70%);
 
                     .progress{
-                        @include progress-bar();
+                        @include progress-bar(90%);
                     }
                 }
 
@@ -222,7 +222,7 @@
                     @include li-content(30%, 70%);
 
                     .progress{
-                        @include progress-bar();
+                        @include progress-bar(90%);
                     }
                 }
 
@@ -274,7 +274,11 @@
                 @include ul-content(4, 1fr);
                 
                 li{
-                    @include li-content(13%, 92%);
+                    @include li-content(13%, 83%);
+
+                    .progress{
+                        @include progress-bar(100%);
+                    }
 
                     .green{
                         color: rgb(116, 197, 130);
