@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { routing, appRoutingProviders } from './app.routing';
+import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
@@ -25,7 +26,8 @@ import { ErrorComponent } from './components/error/error.component';
     routing
   ],
   providers: [
-    appRoutingProviders
+    appRoutingProviders,
+    {provide : LocationStrategy , useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })
