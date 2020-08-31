@@ -271,7 +271,7 @@
             border-top: 1px solid rgba(125, 230, 115, 0.15);
 
             ul{
-                @include ul-content(4, 1fr);
+                @include ul-content(5, 1fr);
                 
                 li{
                     @include li-content(13%, 83%);
