@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { routing, appRoutingProviders } from './app.routing';
 import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 
+//Component imports
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { ResumeComponent } from './components/resume/resume.component';

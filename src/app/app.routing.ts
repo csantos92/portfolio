@@ -1,8 +1,8 @@
-//mportar módulos del router de angular
+//Router imports
 import { ModuleWithProviders } from '@angular/core';
 import {Routes, RouterModule } from '@angular/router';
 
-//Importar componentes
+//Component imports
 import { AboutComponent } from './components/about/about.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { ProjectsComponent } from './components/projects/projects.component';
@@ -11,7 +11,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
 import { pathToFileURL } from 'url';
 
-//Array de rutas
+//Routes array
 const appRoutes: Routes = [
     {path: '', component: AboutComponent },
     {path: 'about', component: AboutComponent},
@@ -22,6 +22,6 @@ const appRoutes: Routes = [
     {path: '**', component: ErrorComponent}
 ];
 
-//Exportar el módulo del router
+//Export router module
 export const appRoutingProviders: any[] = [];
 export const routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes);
