@@ -1,169 +1,25 @@
 <section id="projects-wrapper">
 
     <!--Component title-->
-    <h1>Proyectos</h1>
+    <h1>{{ page_title }}</h1>
 
     <!--Component content-->
     <section id="projects">
 
-        <div class="project-card">
-            
-            <img src="assets/img/front.png" alt="project-img"/>
-            <h3 class="text">Blog de informática<br> (Front-End Angular)</h3>
-            <ul>
-                <li><span class='fab fa-angular'></span></li>
-                <li><span class='fab fa-js'></span></li>
-                <li><span class='fab fa-html5'></span></li>
-                <li><span class='fab fa-css3'></span></li>
-                <li><span class='fab fa-sass'></span></li>
-                <li><span class='fab fa-bootstrap'></span></li>
-            </ul>
-            <ul>
-                <li><a class='fab fa-github' target="_blank" href="https://github.com/csantos92/Blog-FRONT-END"></a></li>
-            </ul>
+        <!--Project cards-->
+        <div class="project-card" *ngFor="let card of cards">
 
-        </div>
-
-        <div class="project-card">
-            
-            <img src="assets/img/back.png" alt="project-img"/>
-            <h3 class="text">Blog de informática<br> (Back-End Laravel)</h3>
+            <img src="{{card.image}}" alt="project-img" />
+            <h3 class="text">{{card.title}}<br />{{card.subtitle}}</h3>
             <ul>
-                <li><span class='fab fa-laravel'></span></li>
-                <li><span class='fab fa-php'></span></li>
-                <li><span class='fas fa-database'></span></li>
+                <li *ngFor="let tec of card.tecs">
+                    <span class='{{tec}}'></span>
+                </li>
             </ul>
             <ul>
-                <li><a class='fab fa-github' target="_blank" href="https://github.com/csantos92/Blog-BACK-END"></a></li>
-            </ul>
-
-        </div>
-
-        <div class="project-card">
-            
-            <img src="assets/img/posergram.png" alt="project-img"/>
-            <h3 class="text">Posergram<br> (Web App Laravel)</h3>
-            <ul>
-                <li><span class='fab fa-laravel'></span></li>
-                <li><span class='fab fa-php'></span></li>
-                <li><span class='fab fa-html5'></span></li>
-                <li><span class='fab fa-css3'></span></li>
-                <li><span class='fab fa-bootstrap'></span></li>
-                <li><span class='fas fa-database'></span></li>
-            </ul>
-            <ul>
-                <li><a class='fab fa-firefox' target="_blank" href="https://www.csantosdev.com/projects/posergram/public/"></a></li>
-                <li><a class='fab fa-github' target="_blank" href="https://github.com/csantos92/posergram"></a></li>
-            </ul>
-
-        </div>
-
-        <div class="project-card">
-            
-            <img src="assets/img/shop.png" alt="project-img"/>
-            <h3 class="text">Travel Shop<br> (Web App PHP)</h3>
-            <ul>
-                <li><span class='fab fa-php'></span></li>
-                <li><span class='fab fa-html5'></span></li>
-                <li><span class='fab fa-css3'></span></li>
-                <li><span class='fas fa-database'></span></li>
-            </ul>
-            <ul>
-                <li><a class='fab fa-firefox' target="_blank" href="https://www.csantosdev.com/projects/shop/"></a></li>
-                <li><a class='fab fa-github' target="_blank" href="https://github.com/csantos92/shop-php"></a></li>
-            </ul>
-
-        </div>
-
-        <div class="project-card">
-            
-            <img src="assets/img/blog.png" alt="project-img"/>
-            <h3 class="text">Blog de música<br> (Web App PHP)</h3>
-            <ul>
-                <li><span class='fab fa-php'></span></li>
-                <li><span class='fab fa-html5'></span></li>
-                <li><span class='fab fa-css3'></span></li>
-                <li><span class='fab fa-bootstrap'></span></li>
-                <li><span class='fas fa-database'></span></li>
-            </ul>
-            <ul>
-                <li><a class='fab fa-firefox' target="_blank" href="https://www.csantosdev.com/projects/blog/"></a></li>
-                <li><a class='fab fa-github' target="_blank" href="https://github.com/csantos92/blog-php"></a></li>
-            </ul>
-
-        </div>
-
-        <div class="project-card">
-            
-            <img src="assets/img/cv.png" alt="project-img"/>
-            <h3 class="text">CV & Portfolio <br> (Web App Angular)</h3>
-            <ul>
-                <li><span class='fab fa-angular'></span></li>
-                <li><span class='fab fa-html5'></span></li>
-                <li><span class='fab fa-css3'></span></li>
-                <li><span class='fab fa-js'></span></li>
-                <li><span class='fab fa-sass'></span></li>
-            </ul>
-            <ul>
-                <li><a class='fab fa-firefox' target="_blank" href="https://www.csantosdev.com"></a></li>
-                <li><a class='fab fa-github' target="_blank" href="https://github.com/csantos92/portfolio"></a></li>
-            </ul>
-
-        </div>
-
-        <div class="project-card">
-            
-            <img src="assets/img/ff7.png" alt="project-img"/>
-            <h3 class="text">Final Fantasy <br> (Web estática)</h3>
-            <ul>
-                <li><span class='fab fa-html5'></span></li>
-                <li><span class='fab fa-css3'></span></li>
-                <li><span class='fab fa-js'></span></li>
-            </ul>
-            <ul>
-                <li><a class='fab fa-firefox' target="_blank" href="https://www.csantosdev.com/projects/ff/"></a></li>
-                <li><a class='fab fa-github' target="_blank" href="https://github.com/csantos92/finalfantasy"></a></li>
-            </ul>
-
-        </div>
-
-        <div class="project-card">
-            
-            <img src="assets/img/ryokou.png" alt="project-img"/>
-            <h3 class="text">Ryokou: Mis viajes (APP Android)</h3>
-            <ul>
-                <li><span class='fab fa-java'></span></li>
-                <li><span class='fab fa-android'></span></li>
-            </ul>
-            <ul>
-                <li><a class='fab fa-google-play' target="_blank" href="https://play.google.com/store/apps/details?id=dev.csantos.ryokou"></a></li>
-            </ul>
-
-        </div>
-
-        <div class="project-card">
-            
-            <img src="assets/img/jap.png" alt="project-img"/>
-            <h3 class="text">Juego de Japonés (Juego Android)</h3>
-            <ul>
-                <li><span class='fab fa-unity'></span></li>
-                <li><span class='fab fa-android'></span></li>
-            </ul>
-            <ul>
-                <li><a class='fab fa-google-play' target="_blank" href="https://play.google.com/store/apps/details?id=com.csantosdev.kanjin5thegame&gl=ES"></a></li>
-            </ul>
-
-        </div>
-
-        <div class="project-card">
-            
-            <img src="assets/img/python.png" alt="project-img"/>
-            <h3 class="text">Dominio disponible (Script)</h3>
-            <ul>
-                <li><span class='fab fa-python'></span></li>
-            </ul>
-            <ul>
-                <li><a class='fab fa-github' target="_blank" href="https://github.com/csantos92/DomainSearch-Script"></a></li>
+                <li *ngFor="let site of card.sites; let i = index">
+                    <a class='{{card.siteIcons[i]}}' target="_blank" href="{{site}}"></a>
+                </li>
             </ul>
 
         </div>
