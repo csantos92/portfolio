@@ -27,7 +27,7 @@ export class AboutComponent implements OnInit {
     this.info = [];
     this.info.push(new Info('Edad', '28'));
     this.info.push(new Info('Navionalidad', 'Español'));
-    this.info.push(new Info('Situación de empleo', 'Buscando'));
+    this.info.push(new Info('Situación de empleo', 'Empleado'));
     this.info.push(new Info('Lugar de residencia', 'Valencia'));
   }
 

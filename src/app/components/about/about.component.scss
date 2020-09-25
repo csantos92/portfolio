@@ -69,39 +69,39 @@
 #about-wrapper{
     height: 100%;
     display: grid;
-    grid-template-rows: 14% 43% 14% 45%;
+    grid-template-rows: 14% 43% 14% 25%;
     overflow-y: scroll;
 
     @include screen-small{
-        grid-template-rows: 14% 47% 14% 45%;
+        grid-template-rows: 14% 47% 14% 35%;
     };
 
     @include tablet-landscape{
-        grid-template-rows: 14% 80% 14% 45%;
+        grid-template-rows: 14% 80% 14% 35%;
     }
 
     @include tablet-portrait{
-        grid-template-rows: 14% 76% 14% 45%;
+        grid-template-rows: 14% 76% 14% 35%;
     }
 
     @include tablet-small{
-        grid-template-rows: 14% 89% 14% 45%;
+        grid-template-rows: 14% 89% 14% 35%;
     };
 
     @include mobile-medium{
-        grid-template-rows: 14% 96% 14% 45%;
+        grid-template-rows: 14% 96% 14% 35%;
     };
 
     @include mobile-small{
-        grid-template-rows: 14% 79% 14% 45%;
+        grid-template-rows: 14% 79% 14% 35%;
     }
 
     @include mobile-extra-small{
-        grid-template-rows: 14% 89% 14% 45%;
+        grid-template-rows: 14% 89% 14% 35%;
     }    
 
     @include mobile-extra-small-2{
-        grid-template-rows: 14% 86% 14% 45%;
+        grid-template-rows: 14% 86% 14% 35%;
     }
 
     h1{

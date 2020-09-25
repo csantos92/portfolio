@@ -7,13 +7,13 @@
 }
 
 @mixin tablet{
-    @media (max-width: 992px){
+    @media (max-width: 988px){
         @content;
     }
 }
 
 @mixin mobile{
-    @media (max-width: 822px){
+    @media (max-width: 700px){
         @content;
     }
 }
@@ -102,15 +102,15 @@
     height: 100%;
 
     @include tablet-landscape{
-        grid-template-rows: 14% 171% 14% 155% 60%;
+        grid-template-rows: 14% 225% 14% 155% 60%;
     };
 
     @include tablet{
-        grid-template-rows: 14% 187% 14% 155% 60%;
+        grid-template-rows: 14% 245% 14% 155% 60%;
     }
 
     @include mobile{
-        grid-template-rows: 14% 181% 14% 155% 60%;
+        grid-template-rows: 14% 225% 14% 155% 60%;
     };
 
     h1{
@@ -134,7 +134,17 @@
 
         @include tablet-landscape{
             grid-template-columns: none;
-            grid-template-rows: 32% auto;
+            grid-template-rows: 48% auto;
+        };
+
+        @include tablet{
+            grid-template-columns: none;
+            grid-template-rows: 50% auto;
+        };
+
+        @include mobile{
+            grid-template-columns: none;
+            grid-template-rows: 48% auto;
         };
 
         #experience{

@@ -255,7 +255,7 @@ $border-style: 1px solid rgba(128, 128, 128, 0.116);
 
             ul{
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
                 line-height: 60px;
                 list-style: none;
 
